@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center ;
+            
+        }
+        .container{
+            height: 200px;
+            width: 400px;
+            background-color: blue;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            align-content:center;
+            position: relative;
+        }
+        .fa{
+            position: absolute;
+            left: 265px;
+            top: 90px;
+            cursor: pointer;
+        }
+        
+        input[type=password]{
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <input type="text" name="" id="pass" placeholder="password">
+            <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
+            <i class="fa fa-eye" id="icon"></i>
+
+        </form>
+
+
+    </div>
+    <script>
+        let ip=document.getElementById('pass');
+        let btn=document.getElementById('icon')
+        let tracker=true;
+        btn.addEventListener("click",function(){
+            if(tracker==true){
+                ip.setAttribute("type","password")
+                this.classList.add("fa-eye-slash");
+                this.classList.remove("fa-eye");
+                tracker=false;
+            }else{
+                ip.setAttribute("type","text")
+                this.classList.add("fa-eye");
+                this.classList.remove("fa-eye-slash");
+                tracker=true;
+            }
+        })
+        
+    </script>
+</body>
+</html>

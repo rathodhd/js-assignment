@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container{
+            height: 300px;
+            width: 500px;
+            border: 1px solid #000;
+            margin:auto;
+            
+        }
+        input[type=button]{
+            height: 30px;
+            width: 30px;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .container h3{
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container label{
+            padding-left: 30px;
+            padding-right: 20px;
+        }
+        #ans{
+            border: none;
+        }
+
+        
+
+    </style>
+
+     
+
+</head>
+<body>
+    
+    <div class="container">
+        <h3>Maths operations</h3>
+        <form name="f1">
+            <label for="t1">Enter 1st numnber</label><input type="text" name="t1"><br><br>
+            <label for="t2">Enter 2nd numnber</label><input type="text" name="t2"><br>
+            <input type="button" name="b1" value="+" onclick="sum()">
+            <input type="button" name="b2" value="-" onclick="sub()">
+            <input type="button" name="b3" value="*" onclick="mul()"><br>
+            <input type="button" name="b4" value="/" onclick="div()">
+            <input type="button" name="b5" value="%" onclick="mod()">
+            <label for="t3">Answer is :</label><input type="text" name="t3" id="ans" >
+            
+        </form>
+    </div>
+    <script>
+        function sum(){
+             document.f1.t3.value=parseInt(document.f1.t1.value)+parseInt(document.f1.t2.value);
+        }
+        function sub(){
+             document.f1.t3.value=parseInt(document.f1.t1.value)-parseInt(document.f1.t2.value);
+        }
+        function mul(){
+             document.f1.t3.value=parseInt(document.f1.t1.value)*parseInt(document.f1.t2.value);
+        }
+        function div(){
+             document.f1.t3.value=parseInt(document.f1.t1.value)/parseInt(document.f1.t2.value);
+        }
+        function mod(){
+             document.f1.t3.value=parseInt(document.f1.t1.value)%parseInt(document.f1.t2.value);
+        }
+     </script>
+</body>
+</html>

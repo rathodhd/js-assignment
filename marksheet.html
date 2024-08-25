@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .container {
+            height: 450px;
+            width: 500px;
+            border: 1px solid #000;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .container h2 {
+            text-transform: capitalize;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .container p {
+            padding-bottom: 10px;
+        }
+
+        .container table {
+            margin: auto;
+            text-align: left;
+        }
+
+        .container td {
+            padding-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        input[type=button] {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>marksheet for information technology</h2>
+        <p>Enter Mark</p>
+        <table>
+            <tbody>
+                <form action="" name="f1">
+                    <tr>
+                        <td><label for="t1">1.C language</label></td>
+                        <td><input type="text" name="t1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="t2">2.C++ language</label></td>
+                        <td><input type="text" name="t2"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="t3">3.Database</label></td>
+                        <td><input type="text" name="t3"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="t4">4.HTML</label></td>
+                        <td><input type="text" name="t4"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="t5">5.CSS</label></td>
+                        <td><input type="text" name="t5"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="t6">6.php</label></td>
+                        <td><input type="text" name="t6"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="t7">7.Core java</label></td>
+                        <td><input type="text" name="t7"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name="b1" value="Result" onclick="per()"></td>
+                    </tr>
+                    <tr>
+                        <td>Total is:<span  id="span" ></span>
+                        <td>Percentage is:  <span id="span1"></span></td>
+                    </tr>
+
+                </form>
+            </tbody>
+        </table>
+
+    </div>
+    <script>
+        let scoredMarks;
+        let span=document.getElementById("span");
+        let sp1=document.getElementById("span1")
+        function per() {
+            scoredMarks=parseInt(document.f1.t1.value) + parseInt(document.f1.t2.value) + parseInt(document.f1.t3.value) + parseInt(document.f1.t4.value) + parseInt(document.f1.t5.value) + parseInt(document.f1.t6.value) + parseInt(document.f1.t7.value)
+          sp1.textContent=`${(scoredMarks/350)*100}`
+           
+           
+            
+            span.textContent= `${scoredMarks}/${350}`;
+            
+        }
+    </script>
+</body>
+
+</html>
